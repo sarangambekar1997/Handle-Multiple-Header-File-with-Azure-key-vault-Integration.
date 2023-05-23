@@ -17,5 +17,4 @@ Instructions
 Usage 
 1. Set up the environment configuration variables for Azure Blob Storage and the secret key vault credentials. 
 2. Run the script to download the file and separate the data into multiple CSV files. 
-3. Check the output folder for the separated CSV files. 
-4. Optionally, upload the separated CSV files back to Azure Blob Storage.
+3. upload the separated CSV files back to Azure Blob Storage.
