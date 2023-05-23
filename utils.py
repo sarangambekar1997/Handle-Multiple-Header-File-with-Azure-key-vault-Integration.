@@ -28,6 +28,14 @@ class BlobOperations:
             self.file_path = temp_file.name
 
         # Read the file using PySpark
+        '''If uneven spaces prevented you from getting all the columns, use the following code:'''
+        
+        # cols = ["_cc" + str(i) for i in range(0, 40)]
+        '''The range would be determined by how many columns your file has.'''
+        
+        # mySchema = StructType([StructField(c, StringType()) for c in cols])
+        '''Provide this schema while reading spark df to get all the columns'''
+       
         self.df = self.spark.read.csv(
             self.file_path, sep=r"\t", encoding="UTF-16", header=False
         )
